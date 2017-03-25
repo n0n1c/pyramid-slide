@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Pyramid Slide</h1>
+  <br>
+  <label>Brick Symbol:</label>
+  <select id="pChar" selected="#" onchange="drawPyramid(getHeight(), this.value)">
+    <option value="#">#</option>
+    <option value="@">@</option>
+    <option value="X">X</option>
+    <option value="$">$</option>
+  </select>
+  <label>How High?</label>
+  <input type="range" value="1" id="pHeight" min="1" max="20" oninput="slideNum(this.value); drawPyramid(this.value, getChar())">
+  <label id="heightLabel"></label>
+  <br><br>
+
+  <div id="pyramid"></div>
+
+  <script src="pyramid-slide.js"></script>
+</body>
+</html>
