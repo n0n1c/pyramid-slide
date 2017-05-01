@@ -1,23 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+      #pyramid {
+          line-height: 0;
+          font-size: 30px;
+          padding: 50px;
+          color: mediumorchid;
+      }
+      body {
+          font-family: "Courier New", monospace;
+          text-align: center;
+          background-color: gray;
+      }
+      h1 {
+        color: silver;
+        background-color: mediumorchid;
+        padding: 40px;
+        margin: 30px;
+      }
+      #tandpsquare {
+        border: 2px solid mediumorchid;
+        margin: 0px 100px 200px;
+        background: lightgray;
+        font-weight:bold;
+      }
+      #top {
+        background-color: silver;
+        padding: 25px;
+      }
+
+  </style>
 </head>
 <body>
-  <h1>Pyramid Slide</h1>
-  <br>
-  <label>Brick Symbol:</label>
-  <select id="pChar" selected="#" onchange="drawPyramid(getHeight(), this.value)">
-    <option value="#">#</option>
-    <option value="@">@</option>
-    <option value="X">X</option>
-    <option value="$">$</option>
-  </select>
-  <label>How High?</label>
-  <input type="range" value="1" id="pHeight" min="1" max="20" oninput="slideNum(this.value); drawPyramid(this.value, getChar())">
-  <label id="heightLabel"></label>
-  <br><br>
+  <div id="wholesquare">
+    <h1>Pyramid Slide</h1>
+    <br>
+    <div id="tandpsquare">
+      <div id="top">
+        <label>Brick Symbol:</label>
+        <select id="pChar" selected="#" onchange="drawPyramid(getHeight(), this.value)">
+          <option value="#">#</option>
+          <option value="@">@</option>
+          <option value="X">X</option>
+          <option value="$">$</option>
+        </select>
+        <label>How High?</label>
+        <input type="range" value="1" id="pHeight" min="1" max="20" oninput="slideNum(this.value); drawPyramid(this.value, getChar())">
+        <label id="heightLabel"></label>
+        <br><br>
+      </div>
 
-  <div id="pyramid"></div>
+      <div id="pyramid"></div>
+    </div>
+  </div>
 
   <script src="pyramid-slide.js"></script>
 </body>
